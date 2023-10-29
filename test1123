@@ -2,3 +2,9 @@ ami ami-0fc5d935ebf8bc3bc
 vpc 	vpc-0726490c58ab5a0c7
 subnet subnet-07f286abf228855bc
 us-east-1d
+
+
+on ec2.tf line 27, in resource "aws_instance" "jenkins_instance":
+│   27:   vpc_security_group_ids = [ "${aws_security_group.security_group.id}" ]
+│ 
+│ A managed resource "aws_security_group" "security_group" has not been declared in the root module.
